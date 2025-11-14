@@ -6,11 +6,6 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        arch:
-        - arm64
-        - amd64
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -24,7 +19,7 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Build ${{matrix.arch}}
+    - name: Build
       uses: docker/build-push-action@v6
       with:
         push: true
