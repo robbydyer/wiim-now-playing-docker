@@ -9,8 +9,7 @@ jobs:
     strategy:
       matrix:
         arch:
-        - aarch64
-        - armv7l
+        - arm64
         - amd64
     runs-on: ubuntu-latest
     steps:
